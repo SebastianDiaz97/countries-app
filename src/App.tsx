@@ -1,8 +1,12 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import { useState } from "react";
+import MainContent from "./components/MainContent";
 
 function App() {
+  const [country, setCountry] = useState({ country: "" });
+  console.log(country);
   return (
     <>
       <Grid
@@ -16,11 +20,11 @@ function App() {
         <GridItem pl="2">
           <Header />
         </GridItem>
-        <GridItem pl="2" bg="green.300">
-          <Search />
+        <GridItem pl="2" maxH={"100px"}>
+          <Search setCountry={setCountry} />
         </GridItem>
-        <GridItem pl="2" bg="blue.300">
-          main
+        <GridItem pl="2" maxW={"90%"} m={"auto"}>
+          <MainContent />
         </GridItem>
       </Grid>
     </>

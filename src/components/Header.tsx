@@ -11,7 +11,7 @@ import { FaMoon, FaRegSun } from "react-icons/fa";
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Flex mt={2}>
+    <Flex mt={2} maxW={'90%'} margin={'auto'}>
       <Center>Where in the world?</Center>
       <Spacer />
       <Center>
